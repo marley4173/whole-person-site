@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Whole Person Ability Initiative</title>
+<meta name="description" content="Whole Person Ability Initiative supports people with intellectual and developmental disabilities and their families in Nigeria through awareness, referrals and community inclusion.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1f2a4d; --paper:#fbfaf7; --sky:#e6edf8; --sun:#f2b134; --leaf:#2e7d5b; --rose:#d9577a;
+  --text:#1f2a4d; --muted:#4a5578; --line:#cfd6e6;
+}
+@media (prefers-color-scheme:dark){
+  :root{--paper:#121830; --sky:#1b2447; --text:#eef1fa; --muted:#b4bdd9; --line:#34406b; --ink:#eef1fa}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--paper);color:var(--text);font:1.125rem/1.65 "Atkinson Hyperlegible",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque","Atkinson Hyperlegible",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sun);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+header.top{padding:1rem 0;border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:space-between;align-items:center}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;text-decoration:none;font-size:1.15rem}
+nav a{margin-right:1.25rem;text-decoration:none;font-weight:700}
+nav a:hover{text-decoration:underline}
+.hero{padding:3.5rem 0 4rem}
+.hero .wrap{display:grid;grid-template-columns:1.2fr .8fr;gap:2.5rem;align-items:center}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;letter-spacing:-.02em}
+.hero p{max-width:34rem;color:var(--muted);margin:1.25rem 0 1.75rem}
+.btns{display:flex;flex-wrap:wrap;gap:.75rem}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;background:var(--sun);color:#1f2a4d}
+.btn.alt{background:transparent;border:2px solid var(--text);color:var(--text)}
+.mark{width:100%;max-width:380px;justify-self:center}
+section{padding:3.5rem 0;border-top:1px solid var(--line)}
+section h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.5rem;font-weight:800}
+.split{display:grid;grid-template-columns:1fr 1.4fr;gap:2.5rem}
+.work{list-style:none;margin:0;padding:0}
+.work li{padding:1.1rem 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:12rem 1fr;gap:1rem}
+.work li:first-child{border-top:1px solid var(--line)}
+.work h3{font-size:1.2rem}
+.work p{margin:0;color:var(--muted)}
+.band{background:var(--sky)}
+.help{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+.help h3{font-size:1.3rem;margin-bottom:.5rem}
+.help p{margin:0 0 .75rem;color:var(--muted)}
+.note{border-left:6px solid var(--rose);padding:.25rem 0 .25rem 1.25rem;max-width:42rem}
+.note p{margin:.4rem 0}
+footer{padding:2.5rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:1rem}
+footer p{margin:.3rem 0}
+@media (max-width:760px){
+  .hero .wrap,.split,.help{grid-template-columns:1fr}
+  .work li{grid-template-columns:1fr;gap:.25rem}
+  .mark{max-width:260px;order:-1;justify-self:start}
+}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top">Whole Person Ability Initiative</a>
+    <nav aria-label="Main">
+      <a href="#about">About</a>
+      <a href="#work">What we do</a>
+      <a href="#help">Get involved</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="hero">
+    <div class="wrap">
+      <div>
+        <h1>See the whole person, not the label.</h1>
+        <p>We support people with intellectual and developmental disabilities, and the families beside them, through awareness, guidance to the right care, and a place in community life.</p>
+        <div class="btns">
+          <a class="btn" href="#help">Get involved</a>
+          <a class="btn alt" href="#contact">Talk to us</a>
+        </div>
+      </div>
+      <svg class="mark" viewBox="0 0 320 320" role="img" aria-label="Four overlapping circles forming one whole shape">
+        <g style="mix-blend-mode:multiply" opacity=".92">
+          <circle cx="125" cy="125" r="90" fill="#f2b134"/>
+          <circle cx="195" cy="125" r="90" fill="#7fb6e8"/>
+          <circle cx="125" cy="195" r="90" fill="#2e7d5b"/>
+          <circle cx="195" cy="195" r="90" fill="#d9577a"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap split">
+      <h2>Why we exist</h2>
+      <div>
+        <p>Many families in Nigeria raise a child or care for a relative with an intellectual or developmental disability with little information, little support and a great deal of stigma.</p>
+        <p>Whole Person Ability Initiative exists to change that. We help families understand what they are facing, find the right health and education services, and be welcomed by their communities. Every person has abilities, and our job is to help those abilities be seen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="band">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <ul class="work">
+        <li><h3>Awareness</h3><p>Talks and campaigns in schools, churches and communities that replace myths about disability with facts.</p></li>
+        <li><h3>Family support</h3><p>Meetups and guidance for parents and caregivers, so no family has to face this alone.</p></li>
+        <li><h3>Referrals</h3><p>Connecting families to health professionals, therapists and schools that can support their child.</p></li>
+        <li><h3>Early signs</h3><p>Helping parents and teachers spot developmental delays early, when support can do the most good.</p></li>
+        <li><h3>Inclusion</h3><p>Speaking up for the rights and dignity of people with disabilities, and building skills and livelihood opportunities.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="help">
+    <div class="wrap">
+      <h2>Get involved</h2>
+      <div class="help">
+        <div>
+          <h3>Volunteer</h3>
+          <p>Teachers, health workers, students and community leaders: your time and skills can help a family.</p>
+          <a href="mailto:wholepersonability@gmail.com?subject=Volunteering">Email us about volunteering</a>
+        </div>
+        <div>
+          <h3>Partner</h3>
+          <p>Schools, clinics, churches and organisations that share our aims are welcome to work with us.</p>
+          <a href="mailto:wholepersonability@gmail.com?subject=Partnership">Email us about partnering</a>
+        </div>
+        <div>
+          <h3>Donate</h3>
+          <p>Donation details will be published here once our foundation account is open. Check back soon.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band">
+    <div class="wrap">
+      <div class="note">
+        <h2 style="font-size:1.5rem">Need urgent help?</h2>
+        <p>We are a new initiative and do not provide medical treatment or emergency services. In an emergency, contact emergency services or go to your nearest hospital. For ongoing care, speak to a doctor or qualified health professional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap split">
+      <h2>Contact</h2>
+      <div>
+        <p>Questions, ideas or want to help? Write to us at <a href="mailto:wholepersonability@gmail.com">wholepersonability@gmail.com</a>.</p>
+        <p>Based in Abuja, Nigeria.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>&copy; 2026 Whole Person Ability Initiative.</p>
+    <p>Registration with the Corporate Affairs Commission is in progress.</p>
+  </div>
+</footer>
+
+</body>
+</html>
