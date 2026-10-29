@@ -11,11 +11,11 @@
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
 <style>
 :root{
-  --ink:#1f2a4d; --paper:#fbfaf7; --sky:#e6edf8; --sun:#f2b134; --leaf:#2e7d5b; --rose:#d9577a;
-  --text:#1f2a4d; --muted:#4a5578; --line:#cfd6e6; --leafText:#2e7d5b;
+  --ink:#0b2b4f; --paper:#fafdf9; --sky:#e8f3ec; --sun:#2f8f3a; --leaf:#0a5a2f; --rose:#005fb3;
+  --text:#0b2b4f; --muted:#3f5a6e; --line:#c9dccf; --leafText:#2e7d3a; --btnbg:#0a5a2f; --btnfg:#fff;
 }
 @media (prefers-color-scheme:dark){
-  :root{--paper:#121830; --sky:#1b2447; --text:#eef1fa; --muted:#b4bdd9; --line:#34406b; --ink:#eef1fa; --leafText:#6fcf97}
+  :root{--paper:#0c1d16; --sky:#14301f; --text:#eaf5ee; --muted:#b5cdbd; --line:#2c4a39; --ink:#eaf5ee; --leafText:#8fd35f; --sun:#8fd35f; --btnbg:#8fd35f; --btnfg:#032a17}
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -41,9 +41,9 @@ nav a:hover{text-decoration:underline}
 .hero h1{font-size:clamp(2.4rem,6vw,4.2rem);font-weight:800;letter-spacing:-.02em}
 .hero p{max-width:34rem;color:var(--muted);margin:1.25rem 0 1.75rem}
 .btns{display:flex;flex-wrap:wrap;gap:.75rem}
-.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;background:var(--sun);color:#1f2a4d}
+.btn{display:inline-block;padding:.85rem 1.4rem;border-radius:999px;font-weight:700;text-decoration:none;background:var(--btnbg);color:var(--btnfg)}
 .btn.alt{background:transparent;border:2px solid var(--text);color:var(--text)}
-.mark{width:100%;max-width:380px;justify-self:center}
+.mark{width:100%;max-width:380px;justify-self:center;border-radius:50%;background:#fff;height:auto}
 section{padding:3.5rem 0;border-top:1px solid var(--line)}
 section h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.5rem;font-weight:800}
 .split{display:grid;grid-template-columns:1fr 1.4fr;gap:2.5rem}
@@ -67,8 +67,22 @@ footer p{margin:.3rem 0}
 .addr{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;word-break:break-all;background:var(--sky);padding:.6rem .75rem;border-radius:6px}
 .copy{font:inherit;font-weight:700;border:2px solid var(--text);background:transparent;color:var(--text);border-radius:999px;padding:.5rem 1.1rem;cursor:pointer}
 .copy:disabled{opacity:.5;cursor:not-allowed}
+.picker label{display:block;font-weight:700;margin-bottom:.5rem}
+.picker select{font:inherit;width:100%;max-width:22rem;padding:.7rem 1rem;border:2px solid var(--text);border-radius:8px;background:var(--paper);color:var(--text)}
+.walletout{margin-top:1.25rem}
+.walletout .wallet{max-width:44rem}
+.walletout p{margin:.75rem 0 0;color:var(--muted);font-size:1rem}
 .warn{margin:1.25rem 0 0;color:var(--muted);font-size:1rem;max-width:42rem}
 @media (max-width:760px){.wallet{grid-template-columns:1fr}.copy{justify-self:start}}
+.tips{margin:0;padding-left:1.2rem;max-width:40rem}
+.tips li{margin:.45rem 0}
+.slides{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 1.25rem 1rem;max-width:1040px;margin:0 auto}
+.slides img{height:min(70vh,600px);width:auto;flex:none;scroll-snap-align:start;border-radius:14px;border:1px solid var(--line)}
+.socials{list-style:none;display:flex;flex-wrap:wrap;gap:1.25rem;padding:0;margin:1rem 0 0}
+.socials a{display:inline-flex;align-items:center;gap:.65rem;font-weight:700;text-decoration:none}
+.socials svg{width:46px;height:46px;padding:10px;border-radius:50%;border:2px solid var(--text);fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;transition:background .15s,color .15s}
+.socials a:hover svg{background:var(--btnbg);color:var(--btnfg);border-color:var(--btnbg)}
+.socials a:hover span{text-decoration:underline}
 @media (max-width:760px){
   .hero .wrap,.split,.help{grid-template-columns:1fr}
   .work li{grid-template-columns:1fr;gap:.25rem}
@@ -83,6 +97,7 @@ footer p{margin:.3rem 0}
     <a class="brand" href="#top"><img src="logo-mark.png" width="56" height="56" alt=""><span class="lockup"><b>WHOLE PERSON</b><i>ABILITY INITIATIVE</i><small>Inclusion &bull; Support &bull; Opportunity</small></span></a>
     <nav aria-label="Main">
       <a href="#about">About</a>
+      <a href="#understand">Learn</a>
       <a href="#work">What we do</a>
       <a href="#help">Get involved</a>
       <a href="#donate">Donate</a>
@@ -102,14 +117,7 @@ footer p{margin:.3rem 0}
           <a class="btn alt" href="#contact">Talk to us</a>
         </div>
       </div>
-      <svg class="mark" viewBox="0 0 320 320" role="img" aria-label="Four overlapping circles forming one whole shape">
-        <g style="mix-blend-mode:multiply" opacity=".92">
-          <circle cx="125" cy="125" r="90" fill="#f2b134"/>
-          <circle cx="195" cy="125" r="90" fill="#7fb6e8"/>
-          <circle cx="125" cy="195" r="90" fill="#2e7d5b"/>
-          <circle cx="195" cy="195" r="90" fill="#d9577a"/>
-        </g>
-      </svg>
+      <img class="mark" src="logo-mark.png" width="380" height="380" alt="Whole Person Ability Initiative emblem: three figures reaching up toward a star, held by an open hand">
     </div>
   </div>
 
@@ -123,6 +131,27 @@ footer p{margin:.3rem 0}
     </div>
   </section>
 
+  <section id="understand">
+    <div class="wrap">
+      <h2>Understanding the conditions</h2>
+      <ul class="work">
+        <li><h3>Intellectual disability</h3><p>Significant differences in learning, reasoning and everyday skills that begin in childhood. With the right support, people with an intellectual disability learn and grow.</p></li>
+        <li><h3>Down syndrome</h3><p>A genetic condition caused by an extra copy of chromosome 21. It happens by chance and is not caused by anything a parent did.</p></li>
+        <li><h3>Autism</h3><p>A difference in how a person communicates, interacts and experiences the world. It is a spectrum, so every autistic person is different.</p></li>
+        <li><h3>Developmental delay</h3><p>When a child reaches milestones such as walking or talking later than expected. Spotting it early means support can start sooner.</p></li>
+      </ul>
+      <h3 style="margin:2.25rem 0 .5rem;font-size:1.4rem">How you can support someone</h3>
+      <ul class="tips">
+        <li>Speak to the person, not about them.</li>
+        <li>Be patient and give them time.</li>
+        <li>Celebrate small steps.</li>
+        <li>Talk to a health professional early if you notice delays.</li>
+        <li>Include them in school, church and community life.</li>
+      </ul>
+      <p class="warn">This is general information, not medical advice. Please speak to a doctor about your own child.</p>
+    </div>
+  </section>
+
   <section id="work" class="band">
     <div class="wrap">
       <h2>What we do</h2>
@@ -133,6 +162,22 @@ footer p{margin:.3rem 0}
         <li><h3>Early signs</h3><p>Helping parents and teachers spot developmental delays early, when support can do the most good.</p></li>
         <li><h3>Inclusion</h3><p>Speaking up for the rights and dignity of people with disabilities, and building skills and livelihood opportunities.</p></li>
       </ul>
+    </div>
+  </section>
+
+  <section id="story">
+    <div class="wrap">
+      <h2>Our story in seven slides</h2>
+      <p style="max-width:40rem;margin:0 0 1.5rem;color:var(--muted)">Swipe through to see why we exist and how you can help.</p>
+    </div>
+    <div class="slides" tabindex="0" role="region" aria-label="Our story, seven slides">
+      <img src="images/slide-1.png" width="864" height="1080" loading="lazy" alt="Slide 1: Millions of children around the world are born with intellectual and developmental disabilities. Is it their fault? Is it their parents’ fault?">
+      <img src="images/slide-2.png" width="864" height="1080" loading="lazy" alt="Slide 2: Neither. It is nobody’s fault. These conditions are differences in how the brain develops.">
+      <img src="images/slide-3.png" width="864" height="1080" loading="lazy" alt="Slide 3: It happens in every country and every community. About 1 in 6 people live with a significant disability, and an estimated 200 million have an intellectual disability.">
+      <img src="images/slide-4.png" width="864" height="1080" loading="lazy" alt="Slide 4: The pain often comes from how people react. Every child needs love, early support, the right therapy, and a school and society that accept them.">
+      <img src="images/slide-5.png" width="864" height="1080" loading="lazy" alt="Slide 5: We exist to raise awareness, teaching families how to love, teach, be patient with, understand and care for people with disabilities.">
+      <img src="images/slide-6.png" width="864" height="1080" loading="lazy" alt="Slide 6: What we do: awareness, family support, guidance to care and schools, early detection and inclusion.">
+      <img src="images/slide-7.png" width="864" height="1080" loading="lazy" alt="Slide 7: You can help change the story. Follow, share, volunteer, partner or give.">
     </div>
   </section>
 
@@ -162,9 +207,12 @@ footer p{margin:.3rem 0}
   <section id="donate">
     <div class="wrap">
       <h2>Donate</h2>
-      <p style="max-width:40rem;margin:0 0 1.5rem;color:var(--muted)">While our registration is being completed, we accept donations in cryptocurrency and, by arrangement, gift cards. To give crypto, copy the address for the coin you want to send.</p>
-      <div id="wallets" class="wallets"></div>
-      <p style="max-width:42rem;margin:1.5rem 0 0"><strong>Gift cards.</strong> If you would like to donate a gift card, email us first at <a href="mailto:wholepersonability@gmail.com?subject=Gift card donation">wholepersonability@gmail.com</a> so we can confirm which cards we can accept. Please do not send card codes until we reply. We will never ask you to buy gift cards for any other reason.</p>
+      <p style="max-width:40rem;margin:0 0 1.5rem;color:var(--muted)">While our registration is being completed, we accept donations in cryptocurrency only. Choose the coin you want to send from the list below.</p>
+      <div class="picker">
+        <label for="coin">Choose a cryptocurrency</label>
+        <select id="coin"><option value="">Select a coin</option></select>
+        <div id="walletOut" class="walletout" aria-live="polite"></div>
+      </div>
       <p class="warn">Always check the network before you send. Coins sent on the wrong network can be lost for good. If you are unsure, send a small test amount first.</p>
     </div>
   </section>
@@ -184,6 +232,7 @@ footer p{margin:.3rem 0}
       <div>
         <p>Questions, ideas or want to help? Write to us at <a href="mailto:wholepersonability@gmail.com">wholepersonability@gmail.com</a>.</p>
         <p>Based in Abuja, Nigeria.</p>
+        <ul id="socials" class="socials" aria-label="Social media"></ul>
       </div>
     </div>
   </section>
@@ -204,8 +253,14 @@ var WALLETS=[
   {coin:"Tether (USDT)",network:"TRON network (TRC-20)",address:"TUKSN1s17RPX3aC9Puv47ptqNhrpmLtX2W"}
 ];
 (function(){
-  var box=document.getElementById("wallets");
-  WALLETS.forEach(function(w){
+  var sel=document.getElementById("coin"),out=document.getElementById("walletOut");
+  WALLETS.forEach(function(w,i){
+    var o=document.createElement("option");o.value=i;o.textContent=w.coin;sel.appendChild(o);
+  });
+  sel.addEventListener("change",function(){
+    out.textContent="";
+    if(sel.value==="")return;
+    var w=WALLETS[+sel.value];
     var ready=w.address.indexOf("PASTE_")!==0;
     var row=document.createElement("div");row.className="wallet";
     var t=document.createElement("div");
@@ -223,7 +278,27 @@ var WALLETS=[
         });
       }catch(e){}
     });
-    row.appendChild(t);row.appendChild(a);row.appendChild(b);box.appendChild(row);
+    row.appendChild(t);row.appendChild(a);row.appendChild(b);out.appendChild(row);
+    var p=document.createElement("p");
+    p.textContent="Send only "+w.coin+" on the "+w.network+" to this address.";
+    out.appendChild(p);
+  });
+})();
+// Paste your page links between the quotes. Empty ones are hidden.
+var SOCIALS=[{name:"Instagram",url:"https://www.instagram.com/wholepersonability"},{name:"Facebook",url:"https://www.facebook.com/share/1C9CrCTXGU/?mibextid=wwXIfr"}];
+var ICONS={
+  Instagram:'<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>',
+  Facebook:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>'
+};
+(function(){
+  var ul=document.getElementById("socials");
+  SOCIALS.forEach(function(x){
+    if(!x.url)return;
+    var li=document.createElement("li"),a=document.createElement("a");
+    a.href=x.url;a.target="_blank";a.rel="noopener";a.setAttribute("aria-label","Follow us on "+x.name);
+    a.innerHTML=ICONS[x.name]||"";
+    var sp=document.createElement("span");sp.textContent=x.name;a.appendChild(sp);
+    li.appendChild(a);ul.appendChild(li);
   });
 })();
 </script>
