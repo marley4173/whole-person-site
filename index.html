@@ -5,16 +5,17 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Whole Person Ability Initiative</title>
 <meta name="description" content="Whole Person Ability Initiative supports people with intellectual and developmental disabilities and their families in Nigeria through awareness, referrals and community inclusion.">
+<link rel="icon" href="logo-mark.png" type="image/png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#1f2a4d; --paper:#fbfaf7; --sky:#e6edf8; --sun:#f2b134; --leaf:#2e7d5b; --rose:#d9577a;
-  --text:#1f2a4d; --muted:#4a5578; --line:#cfd6e6;
+  --text:#1f2a4d; --muted:#4a5578; --line:#cfd6e6; --leafText:#2e7d5b;
 }
 @media (prefers-color-scheme:dark){
-  :root{--paper:#121830; --sky:#1b2447; --text:#eef1fa; --muted:#b4bdd9; --line:#34406b; --ink:#eef1fa}
+  :root{--paper:#121830; --sky:#1b2447; --text:#eef1fa; --muted:#b4bdd9; --line:#34406b; --ink:#eef1fa; --leafText:#6fcf97}
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -26,7 +27,13 @@ a{color:inherit}
 .wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
 header.top{padding:1rem 0;border-bottom:1px solid var(--line)}
 header.top .wrap{display:flex;flex-wrap:wrap;gap:.75rem 1.5rem;justify-content:space-between;align-items:center}
-.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;text-decoration:none;font-size:1.15rem}
+.brand{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;text-decoration:none;font-size:1.15rem;display:flex;align-items:center;gap:.6rem}
+.brand img{display:block;flex:none;border-radius:50%;background:#fff}
+.lockup{display:flex;flex-direction:column;line-height:1.1}
+.lockup b{font-size:1.3rem;font-weight:800;letter-spacing:.02em}
+.lockup i{font-style:normal;font-weight:600;font-size:.8rem;letter-spacing:.17em;color:var(--leafText)}
+.lockup small{font-family:"Atkinson Hyperlegible",sans-serif;font-weight:400;font-size:.72rem;letter-spacing:.06em;color:var(--muted);margin-top:.25rem}
+@media (max-width:520px){.lockup small{display:none}.lockup b{font-size:1.1rem}}
 nav a{margin-right:1.25rem;text-decoration:none;font-weight:700}
 nav a:hover{text-decoration:underline}
 .hero{padding:3.5rem 0 4rem}
@@ -53,6 +60,15 @@ section h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:1.5rem;font-weight:8
 .note p{margin:.4rem 0}
 footer{padding:2.5rem 0;border-top:1px solid var(--line);color:var(--muted);font-size:1rem}
 footer p{margin:.3rem 0}
+.wallets{display:grid;gap:1rem}
+.wallet{display:grid;grid-template-columns:11rem 1fr auto;gap:1rem;align-items:center;padding:1rem 1.1rem;border:1px solid var(--line);border-radius:10px}
+.wallet h3{font-size:1.15rem}
+.wallet small{display:block;color:var(--muted);font-size:.9rem}
+.addr{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.92rem;word-break:break-all;background:var(--sky);padding:.6rem .75rem;border-radius:6px}
+.copy{font:inherit;font-weight:700;border:2px solid var(--text);background:transparent;color:var(--text);border-radius:999px;padding:.5rem 1.1rem;cursor:pointer}
+.copy:disabled{opacity:.5;cursor:not-allowed}
+.warn{margin:1.25rem 0 0;color:var(--muted);font-size:1rem;max-width:42rem}
+@media (max-width:760px){.wallet{grid-template-columns:1fr}.copy{justify-self:start}}
 @media (max-width:760px){
   .hero .wrap,.split,.help{grid-template-columns:1fr}
   .work li{grid-template-columns:1fr;gap:.25rem}
@@ -64,11 +80,12 @@ footer p{margin:.3rem 0}
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top">Whole Person Ability Initiative</a>
+    <a class="brand" href="#top"><img src="logo-mark.png" width="56" height="56" alt=""><span class="lockup"><b>WHOLE PERSON</b><i>ABILITY INITIATIVE</i><small>Inclusion &bull; Support &bull; Opportunity</small></span></a>
     <nav aria-label="Main">
       <a href="#about">About</a>
       <a href="#work">What we do</a>
       <a href="#help">Get involved</a>
+      <a href="#donate">Donate</a>
       <a href="#contact">Contact</a>
     </nav>
   </div>
@@ -135,9 +152,20 @@ footer p{margin:.3rem 0}
         </div>
         <div>
           <h3>Donate</h3>
-          <p>Donation details will be published here once our foundation account is open. Check back soon.</p>
+          <p>Give in Bitcoin, Ethereum or USDT. Every contribution helps us reach more families.</p>
+          <a href="#donate">See wallet addresses</a>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="donate">
+    <div class="wrap">
+      <h2>Donate</h2>
+      <p style="max-width:40rem;margin:0 0 1.5rem;color:var(--muted)">While our registration is being completed, we accept donations in cryptocurrency and, by arrangement, gift cards. To give crypto, copy the address for the coin you want to send.</p>
+      <div id="wallets" class="wallets"></div>
+      <p style="max-width:42rem;margin:1.5rem 0 0"><strong>Gift cards.</strong> If you would like to donate a gift card, email us first at <a href="mailto:wholepersonability@gmail.com?subject=Gift card donation">wholepersonability@gmail.com</a> so we can confirm which cards we can accept. Please do not send card codes until we reply. We will never ask you to buy gift cards for any other reason.</p>
+      <p class="warn">Always check the network before you send. Coins sent on the wrong network can be lost for good. If you are unsure, send a small test amount first.</p>
     </div>
   </section>
 
@@ -168,5 +196,36 @@ footer p{margin:.3rem 0}
   </div>
 </footer>
 
+<script>
+// Replace each PASTE_... value with your real wallet address. Placeholders are never shown to visitors.
+var WALLETS=[
+  {coin:"Bitcoin (BTC)",network:"Bitcoin network",address:"bc1qtu6lkjcj2nvhhsg65xwe8jpmrlhgmsettgkl2v"},
+  {coin:"Ethereum (ETH)",network:"Ethereum network (ERC-20)",address:"0x0Bf77Bae516354fF3cA80B0171860190d204a845"},
+  {coin:"Tether (USDT)",network:"TRON network (TRC-20)",address:"TUKSN1s17RPX3aC9Puv47ptqNhrpmLtX2W"}
+];
+(function(){
+  var box=document.getElementById("wallets");
+  WALLETS.forEach(function(w){
+    var ready=w.address.indexOf("PASTE_")!==0;
+    var row=document.createElement("div");row.className="wallet";
+    var t=document.createElement("div");
+    var h=document.createElement("h3");h.textContent=w.coin;
+    var n=document.createElement("small");n.textContent="Network: "+w.network;
+    t.appendChild(h);t.appendChild(n);
+    var a=document.createElement("div");a.className="addr";
+    a.textContent=ready?w.address:"Address coming soon";
+    var b=document.createElement("button");b.className="copy";b.type="button";
+    b.textContent="Copy";b.disabled=!ready;
+    b.addEventListener("click",function(){
+      try{
+        navigator.clipboard.writeText(w.address).then(function(){
+          b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1800);
+        });
+      }catch(e){}
+    });
+    row.appendChild(t);row.appendChild(a);row.appendChild(b);box.appendChild(row);
+  });
+})();
+</script>
 </body>
 </html>
