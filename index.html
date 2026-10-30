@@ -6,13 +6,15 @@
 <title>Whole Person Ability Initiative</title>
 <meta name="description" content="Whole Person Ability Initiative supports people with intellectual and developmental disabilities and their families in Africa and around the world through awareness, referrals and community inclusion.">
 <link rel="icon" href="logo-mark.png" type="image/png">
+<link rel="stylesheet" href="extras.css">
+<script src="a11y.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Bricolage+Grotesque:wght@600;800&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#0b2b4f; --paper:#fafdf9; --sky:#e8f3ec; --sun:#2f8f3a; --leaf:#0a5a2f; --rose:#005fb3;
-  --text:#0b2b4f; --muted:#3f5a6e; --line:#c9dccf; --leafText:#2e7d3a; --btnbg:#0a5a2f; --btnfg:#fff;
+  --text:#0b2b4f; --muted:#3f5a6e; --line:#c9dccf; --leafText:#256a31; --btnbg:#0a5a2f; --btnfg:#fff;
 }
 @media (prefers-color-scheme:dark){
   :root{--paper:#0c1d16; --sky:#14301f; --text:#eaf5ee; --muted:#b5cdbd; --line:#2c4a39; --ink:#eaf5ee; --leafText:#8fd35f; --sun:#8fd35f; --btnbg:#8fd35f; --btnfg:#032a17}
@@ -135,15 +137,16 @@ footer p{margin:.3rem 0}
 </style>
 </head>
 <body>
+<a class="skip" href="#top">Skip to main content</a>
 
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top"><img src="logo-mark.png" width="56" height="56" alt=""><span class="lockup"><b>WHOLE PERSON</b><i>ABILITY INITIATIVE</i><small>Inclusion &bull; Support &bull; Opportunity</small></span></a>
-    <nav aria-label="Main"><a href="#about">About</a><a href="#work">What we do</a><a href="#founder">Founder</a><a href="#help">Get involved</a><a href="#donate">Support</a><a href="#contact">Contact</a></nav>
+    <nav aria-label="Main"><a href="#about">About</a><a href="#work">What we do</a><a href="#founder">Founder</a><a href="#help">Get involved</a><a href="#apply">Apply</a><a href="#donate">Support</a><a href="#contact">Contact</a></nav>
   </div>
 </header>
 
-<main id="top">
+<main id="top" tabindex="-1">
   <div class="hero">
     <div class="wrap">
       <div>
@@ -232,6 +235,7 @@ footer p{margin:.3rem 0}
         </ul>
         <p>Our goal is to help reduce barriers that prevent children living with disabilities from accessing essential resources, education and opportunities.</p>
         <p>All assistance will be guided by available resources, individual needs, appropriate professional advice and responsible accountability.</p>
+        <p><a class="btn" href="#apply-family">Request support for your family</a></p>
       </div>
     </div>
   </section>
@@ -299,12 +303,82 @@ footer p{margin:.3rem 0}
       <p class="intro">Creating a more inclusive society requires collective effort. Every contribution, every act of kindness and every voice raised for inclusion can make a difference.</p>
       <p class="intro">Whether you are an individual, student, professional, organisation or institution, there is an opportunity to be part of our journey.</p>
       <div class="ways">
-        <article><h3>Become a Volunteer</h3><p>Join our growing team and contribute your time, skills, knowledge and passion towards promoting disability awareness, inclusion and community support.</p><a href="mailto:wholepersonability@gmail.com?subject=Volunteering">Email us about volunteering</a></article>
-        <article><h3>Partner With Us</h3><p>We welcome opportunities to collaborate with schools, businesses, nonprofit organisations, healthcare professionals, educational institutions and other stakeholders who share our vision.</p><a href="mailto:wholepersonability@gmail.com?subject=Partnership">Email us about partnering</a></article>
+        <article><h3>Become a Volunteer</h3><p>Join our growing team and contribute your time, skills, knowledge and passion towards promoting disability awareness, inclusion and community support.</p><a href="#apply-volunteer">Register to volunteer</a></article>
+        <article><h3>Partner With Us</h3><p>We welcome opportunities to collaborate with schools, businesses, nonprofit organisations, healthcare professionals, educational institutions and other stakeholders who share our vision.</p><a href="#apply-partnership">Send a partnership enquiry</a></article>
         <article><h3>Support Our Mission</h3><p>Your support can help us develop educational programmes, organise community outreach activities and provide practical assistance to children and families who need it.</p><a href="#donate">See how to give</a></article>
         <article><h3>Spread Awareness</h3><p>Help us educate more people by sharing our message, participating in awareness campaigns and encouraging conversations about disability inclusion.</p><a href="#story">Share our story</a></article>
       </div>
       <p class="closer">Together, we can build a society where everyone belongs.</p>
+    </div>
+  </section>
+
+  <section id="apply" class="band">
+    <div class="wrap">
+      <h2>Apply or send an enquiry</h2>
+      <p class="intro">Choose the form that fits. We only ask for what we need to reply. Your details are used only to respond to your request (see our <a href="#privacy">privacy notice</a>).</p>
+      <details class="fdet" id="apply-volunteer">
+        <summary>Volunteer registration</summary>
+        <div class="fbody">
+          <p>Tell us how you would like to help. We will get in touch to talk about the next steps.</p>
+          <form data-form="volunteer" novalidate aria-label="Volunteer registration">
+            <div class="errsum" tabindex="-1" hidden></div>
+            <div class="fld" data-field="name"><label for="volunteer-name">Full name <span class="req">(required)</span></label><input type="text" id="volunteer-name" name="name" maxlength="100" autocomplete="name" aria-required="true"></div><div class="fld" data-field="email"><label for="volunteer-email">Email address <span class="req">(required)</span></label><input type="email" id="volunteer-email" name="email" maxlength="120" autocomplete="email" aria-required="true"></div><div class="fld" data-field="phone"><label for="volunteer-phone">Phone number <span class="opt">(optional)</span></label><p class="hint" id="volunteer-phone-hint">Include your country code if you are outside Nigeria.</p><input type="tel" id="volunteer-phone" name="phone" maxlength="30" autocomplete="tel" aria-describedby="volunteer-phone-hint"></div><div class="fld" data-field="skills"><label for="volunteer-skills">Skills you can offer <span class="req">(required)</span></label><p class="hint" id="volunteer-skills-hint">For example: teaching, healthcare, design, fundraising, transport or event planning.</p><textarea id="volunteer-skills" name="skills" rows="4" maxlength="600" aria-required="true" aria-describedby="volunteer-skills-hint"></textarea></div><div class="fld" data-field="availability"><label for="volunteer-availability">Availability <span class="req">(required)</span></label><p class="hint" id="volunteer-availability-hint">For example: weekends, two evenings a week, or school holidays.</p><input type="text" id="volunteer-availability" name="availability" maxlength="300" aria-required="true" aria-describedby="volunteer-availability-hint"></div>
+            <div class="fld" data-field="consent"><div class="consent"><input type="checkbox" id="volunteer-consent" name="consent"><label for="volunteer-consent">I have read the <a href="#privacy">privacy notice</a> and agree to Whole Person Ability Initiative using my details to respond to this request.</label></div></div>
+            <div class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <button type="submit" class="fsubmit">Send my registration</button>
+          </form>
+          <div class="fok" tabindex="-1" role="status" hidden>Thank you. We have received your volunteer registration and will reply using the contact details you gave.</div>
+        </div>
+      </details>
+      <details class="fdet" id="apply-partnership">
+        <summary>Partnership enquiry</summary>
+        <div class="fbody">
+          <p>Tell us about your organisation and how you would like to work with us.</p>
+          <form data-form="partnership" novalidate aria-label="Partnership enquiry">
+            <div class="errsum" tabindex="-1" hidden></div>
+            <div class="fld" data-field="organisation"><label for="partnership-organisation">Organisation name <span class="req">(required)</span></label><input type="text" id="partnership-organisation" name="organisation" maxlength="150" autocomplete="organization" aria-required="true"></div><div class="fld" data-field="contact_name"><label for="partnership-contact_name">Contact person <span class="req">(required)</span></label><input type="text" id="partnership-contact_name" name="contact_name" maxlength="100" autocomplete="name" aria-required="true"></div><div class="fld" data-field="email"><label for="partnership-email">Email address <span class="req">(required)</span></label><input type="email" id="partnership-email" name="email" maxlength="120" autocomplete="email" aria-required="true"></div><div class="fld" data-field="phone"><label for="partnership-phone">Phone number <span class="opt">(optional)</span></label><input type="tel" id="partnership-phone" name="phone" maxlength="30" autocomplete="tel"></div><div class="fld" data-field="proposal"><label for="partnership-proposal">Proposed collaboration <span class="req">(required)</span></label><textarea id="partnership-proposal" name="proposal" rows="6" maxlength="1500" aria-required="true"></textarea></div>
+            <div class="fld" data-field="consent"><div class="consent"><input type="checkbox" id="partnership-consent" name="consent"><label for="partnership-consent">I have read the <a href="#privacy">privacy notice</a> and agree to Whole Person Ability Initiative using my details to respond to this request.</label></div></div>
+            <div class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <button type="submit" class="fsubmit">Send my enquiry</button>
+          </form>
+          <div class="fok" tabindex="-1" role="status" hidden>Thank you. We have received your partnership enquiry and will reply using the contact details you gave.</div>
+        </div>
+      </details>
+      <details class="fdet" id="apply-family">
+        <summary>Family support request</summary>
+        <div class="fbody">
+          <p>Use this form if you are a parent or caregiver asking for support for a child or family member living with a disability. We will read your request and reply using the contact details you give. We cannot promise a particular kind of help, but we will do our best to point you to support.</p><p class="fnote"><strong>To protect your child’s privacy,</strong> please do not include your child’s full name, photos, medical records, ID numbers or exact home address. A first name or a general description is enough.</p>
+          <form data-form="family" novalidate aria-label="Family support request">
+            <div class="errsum" tabindex="-1" hidden></div>
+            <div class="fld" data-field="name"><label for="family-name">Your name (parent or caregiver) <span class="req">(required)</span></label><input type="text" id="family-name" name="name" maxlength="100" autocomplete="name" aria-required="true"></div><div class="fld" data-field="email"><label for="family-email">Email address <span class="opt">(optional)</span></label><p class="hint" id="family-email-hint">Please give an email address or a phone number, so we can reply.</p><input type="email" id="family-email" name="email" maxlength="120" autocomplete="email" aria-describedby="family-email-hint"></div><div class="fld" data-field="phone"><label for="family-phone">Phone number <span class="opt">(optional)</span></label><input type="tel" id="family-phone" name="phone" maxlength="30" autocomplete="tel"></div><div class="fld" data-field="support_type"><label for="family-support_type">Type of support needed <span class="req">(required)</span></label><select id="family-support_type" name="support_type" aria-required="true"><option value="">Choose one</option><option>Educational materials and school supplies</option><option>Assistive devices or mobility support</option><option>Connecting with healthcare or therapy professionals</option><option>Guidance for parents and caregivers</option><option>Referral to other support organisations</option><option>Other</option></select></div><div class="fld" data-field="description"><label for="family-description">Description of your request <span class="req">(required)</span></label><p class="hint" id="family-description-hint">Describe what you need in a few sentences.</p><textarea id="family-description" name="description" rows="4" maxlength="1000" aria-required="true" aria-describedby="family-description-hint"></textarea></div>
+            <div class="fld" data-field="consent"><div class="consent"><input type="checkbox" id="family-consent" name="consent"><label for="family-consent">I have read the <a href="#privacy">privacy notice</a> and agree to Whole Person Ability Initiative using my details to respond to this request.</label></div></div>
+            <div class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+            <button type="submit" class="fsubmit">Send my request</button>
+          </form>
+          <div class="fok" tabindex="-1" role="status" hidden>Thank you. We have received your request and will reply using the contact details you gave.</div>
+        </div>
+      </details>
+    </div>
+  </section>
+
+  <section id="privacy" class="priv">
+    <div class="wrap">
+      <h2>Privacy notice</h2>
+      <p class="intro">Last updated: October 2026</p>
+      <h3>Who we are</h3>
+      <p>Whole Person Ability Initiative, based in Abuja, Nigeria. You can reach us at <a href="mailto:wholepersonability@gmail.com">wholepersonability@gmail.com</a>.</p>
+      <h3>What we collect</h3>
+      <p>Only what each form asks for: your name, your contact details and the information you choose to type. We do not ask for children’s names, photos, medical records or ID numbers, and we ask you not to include them.</p>
+      <h3>Why we collect it</h3>
+      <p>To reply to your request, and to match volunteers, partners and families with the right next step. We do not sell your details or use them for marketing.</p>
+      <h3>Who sees it</h3>
+      <p>Your form is sent by email to our official inbox. An email delivery service and our website host process it for us so that it can arrive. We do not keep a separate database of submissions on the website.</p>
+      <h3>How long we keep it</h3>
+      <p>Only for as long as we need it to respond and to keep sensible records. After that we delete it.</p>
+      <h3>Requests involving children</h3>
+      <p>Family support requests must be made by a parent or caregiver. We collect as little as possible about the child: the type of support needed and whatever you choose to describe.</p>
+      <h3>Your rights</h3>
+      <p>You can ask to see, correct or delete the information you sent us. Email us and we will help. We aim to handle personal information responsibly and in line with Nigerian data protection law.</p>
     </div>
   </section>
 
@@ -370,7 +444,7 @@ footer p{margin:.3rem 0}
 <footer>
   <div class="wrap">
     <p class="tag2">There Is Ability in Every Disability.</p>
-    <p>&copy; 2026 Whole Person Ability Initiative.</p>
+    <p>&copy; 2026 Whole Person Ability Initiative. <a href="#privacy">Privacy notice</a></p>
     <p>Registration with the Corporate Affairs Commission is in progress.</p>
   </div>
 </footer>
@@ -404,7 +478,7 @@ var WALLETS=[
     b.addEventListener("click",function(){
       try{
         navigator.clipboard.writeText(w.address).then(function(){
-          b.textContent="Copied";setTimeout(function(){b.textContent="Copy"},1800);
+          b.textContent="Copied";var L=document.getElementById("a11y-live");if(L){L.textContent="";setTimeout(function(){L.textContent="Address copied to clipboard"},50)}setTimeout(function(){b.textContent="Copy"},1800);
         });
       }catch(e){}
     });
@@ -432,5 +506,7 @@ var ICONS={
   });
 })();
 </script>
+<script src="form-rules.js"></script>
+<script src="forms.js"></script>
 </body>
 </html>
