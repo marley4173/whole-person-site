@@ -88,6 +88,50 @@ footer p{margin:.3rem 0}
   .work li{grid-template-columns:1fr;gap:.25rem}
   .mark{max-width:260px;order:-1;justify-self:start}
 }
+
+.hero{background:linear-gradient(180deg,var(--sky),var(--paper))}
+.hero h1{font-size:clamp(2.6rem,7vw,4.8rem);line-height:1.04}
+.hero .sub{font-family:"Bricolage Grotesque",sans-serif;font-size:clamp(1.3rem,2.6vw,1.8rem);font-weight:600;line-height:1.3;color:var(--leafText);max-width:34rem;margin:1.25rem 0 1.25rem}
+.hero p{max-width:36rem}.hero .join{font-weight:700;color:var(--text);margin-bottom:1.5rem}
+.hero .btns .btn.alt{border-color:var(--text);color:var(--text)}
+.intro{max-width:44rem;color:var(--muted);margin:0 0 1rem}
+.belief,.fq{font-family:"Bricolage Grotesque",sans-serif;font-size:1.5rem;font-weight:800;line-height:1.25;color:var(--leafText);margin-top:1.5rem}
+.fq{border-left:6px solid var(--rose);padding-left:1rem;color:var(--text)}
+.vm,.values,.ways{display:grid;gap:1.25rem;margin-top:1.5rem}
+.vm{grid-template-columns:1fr 1fr}.values{grid-template-columns:repeat(3,1fr)}.ways{grid-template-columns:1fr 1fr}
+.vm article,.ways article{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1.5rem}
+.vm article:first-child{border-top:6px solid var(--sun)}.vm article:last-child{border-top:6px solid var(--rose)}
+.values article{border:1px solid var(--line);border-radius:14px;padding:1.25rem 1.3rem;border-left:6px solid var(--sun)}
+.values article:nth-child(even){border-left-color:var(--rose)}
+.vm h3,.values h3,.ways h3{font-size:1.35rem;margin-bottom:.6rem}
+.vm p,.values p,.ways p{margin:0 0 .75rem;color:var(--muted)}.values p{margin:0}
+.prog{list-style:none;counter-reset:p;margin:2rem 0 0;padding:0}
+.prog li{counter-increment:p;position:relative;padding:1.5rem 0 1.5rem 4.5rem;border-top:1px solid var(--line)}
+.prog li::before{content:counter(p);position:absolute;left:0;top:1.2rem;font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:2.6rem;color:var(--sun);line-height:1}
+.prog h3{font-size:1.4rem;margin-bottom:.5rem}.prog p{margin:0 0 .6rem;color:var(--muted);max-width:44rem}
+.checks{list-style:none;padding:0;margin:0 0 1.25rem}
+.checks li{position:relative;padding-left:1.9rem;margin:.55rem 0}
+.checks li::before{content:"";position:absolute;left:.15rem;top:.55rem;width:.6rem;height:.35rem;border-left:3px solid var(--sun);border-bottom:3px solid var(--sun);transform:rotate(-45deg)}
+.fgrid{display:grid;grid-template-columns:.8fr 1.2fr;gap:3rem;align-items:start}
+.fphoto{position:relative;isolation:isolate;margin:0 14px 14px 0}
+.fphoto::before{content:"";position:absolute;inset:16px -14px -14px 16px;background:var(--sun);border-radius:26px;z-index:-1}
+.fphoto img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:26px}
+.fname{font-family:"Bricolage Grotesque",sans-serif;font-size:2.2rem;font-weight:800;margin:.5rem 0 0;line-height:1.1}
+.frole{font-weight:700;color:var(--leafText);margin:.25rem 0 0}.frole2{color:var(--muted);margin:0 0 1.25rem}
+.ways a{font-weight:700}.closer{font-family:"Bricolage Grotesque",sans-serif;font-size:1.5rem;font-weight:800;margin:2rem 0 0;color:var(--leafText)}
+.split2{display:grid;grid-template-columns:1.1fr .9fr;gap:2.5rem;margin-top:1.5rem}
+.give{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:1.5rem;align-self:start}
+.give h3{font-size:1.4rem;margin-bottom:.5rem}
+.lead{font-family:"Bricolage Grotesque",sans-serif;font-size:1.6rem;font-weight:800;margin-top:0}
+.tag2{font-family:"Bricolage Grotesque",sans-serif;font-weight:800;font-size:1.3rem;color:var(--leafText)}
+@media (max-width:860px){.vm,.ways,.fgrid,.split2{grid-template-columns:1fr}.values{grid-template-columns:1fr 1fr}.fphoto{max-width:340px}}
+@media (max-width:560px){.values{grid-template-columns:1fr}.prog li{padding-left:3.4rem}.prog li::before{font-size:2rem}}
+.so{font-size:clamp(1.6rem,3.5vw,2.2rem);font-weight:800;margin:3rem 0 .5rem}
+.objs{list-style:none;counter-reset:o;display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.25rem 0 0;padding:0}
+.objs li{counter-increment:o;position:relative;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:1.2rem 1.3rem 1.2rem 4rem}
+.objs li::before{content:counter(o);position:absolute;left:1.1rem;top:1.15rem;width:2rem;height:2rem;border-radius:50%;background:var(--btnbg);color:var(--btnfg);font-weight:700;display:grid;place-items:center;font-size:1rem}
+.objs h4{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;margin:0 0 .3rem}.objs p{margin:0;color:var(--muted);font-size:1.02rem;line-height:1.55}
+@media (max-width:760px){.objs{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -95,14 +139,7 @@ footer p{margin:.3rem 0}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top"><img src="logo-mark.png" width="56" height="56" alt=""><span class="lockup"><b>WHOLE PERSON</b><i>ABILITY INITIATIVE</i><small>Inclusion &bull; Support &bull; Opportunity</small></span></a>
-    <nav aria-label="Main">
-      <a href="#about">About</a>
-      <a href="#understand">Learn</a>
-      <a href="#work">What we do</a>
-      <a href="#help">Get involved</a>
-      <a href="#donate">Donate</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <nav aria-label="Main"><a href="#about">About</a><a href="#work">What we do</a><a href="#founder">Founder</a><a href="#help">Get involved</a><a href="#donate">Support</a><a href="#contact">Contact</a></nav>
   </div>
 </header>
 
@@ -110,12 +147,13 @@ footer p{margin:.3rem 0}
   <div class="hero">
     <div class="wrap">
       <div>
-        <h1>See the whole person, not the label.</h1>
-        <p>We support people with intellectual and developmental disabilities, and the families beside them, through awareness, guidance to the right care, and a place in community life.</p>
-        <div class="btns">
-          <a class="btn" href="#help">Get involved</a>
-          <a class="btn alt" href="#contact">Talk to us</a>
-        </div>
+        <h1>There Is Ability in Every Disability.</h1>
+        <p class="sub">Building a world where everyone belongs, is valued and has the opportunity to thrive.</p>
+        <p>Whole Person Ability Initiative is an organisation committed to supporting children and individuals living with disabilities, promoting inclusion and equal opportunities, and educating communities about disability awareness and acceptance.</p>
+        <p>We believe that disability does not define a person’s worth or limit their potential. Every individual deserves dignity, understanding, support and the opportunity to reach their full potential.</p>
+        <p>Our journey begins with local communities, schools and families, with a vision to create meaningful change that extends beyond borders.</p>
+        <p class="join">Join us in building a more inclusive world.</p>
+        <div class="btns"><a class="btn" href="#about">Learn more</a><a class="btn alt" href="#help">Get involved</a><a class="btn alt" href="#donate">Support our mission</a></div>
       </div>
       <img class="mark" src="logo-mark.png" width="380" height="380" alt="Whole Person Ability Initiative emblem: three figures reaching up toward a star, held by an open hand">
     </div>
@@ -123,10 +161,96 @@ footer p{margin:.3rem 0}
 
   <section id="about">
     <div class="wrap split">
-      <h2>Why we exist</h2>
+      <h2>Who we are</h2>
       <div>
-        <p>Many families in Africa and around the world raise a child or care for a relative with an intellectual or developmental disability with little information, little support and a great deal of stigma.</p>
-        <p>Whole Person Ability Initiative exists to change that. We help families understand what they are facing, find the right health and education services, and be welcomed by their communities. Every person has abilities, and our job is to help those abilities be seen.</p>
+        <p>Whole Person Ability Initiative is an organisation established to promote the dignity, inclusion, empowerment and equal opportunities of children and individuals living with disabilities.</p>
+        <p>We believe that every person has abilities, potential and value, regardless of their physical, intellectual, developmental or other disabilities.</p>
+        <p>Our organisation seeks to create a more understanding and inclusive society by educating communities, supporting families, encouraging inclusive education and advocating for equal opportunities.</p>
+        <p>We recognise that meaningful inclusion begins with awareness, acceptance and action. Through community engagement, educational initiatives, advocacy and practical support, we aim to make a positive difference in the lives of individuals and families affected by disabilities.</p>
+        <p>Although our journey begins within local communities, our vision is global. We aspire to build partnerships and initiatives that contribute to a world where everyone has the opportunity to participate, grow and thrive.</p>
+        <p class="belief">Our belief: There Is Ability in Every Disability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="vision" class="band">
+    <div class="wrap">
+      <h2>Our vision and mission</h2>
+      <div class="vm">
+        <article><h3>Our Vision</h3><p>To build a world where children and individuals living with disabilities are valued, accepted, included and empowered to live fulfilling lives with equal opportunities, dignity and respect.</p></article>
+        <article><h3>Our Mission</h3><p>To support children and individuals living with disabilities, promote inclusion and equal opportunities, and educate communities, families and institutions on understanding, accepting and supporting people with disabilities.</p><p>Through awareness, advocacy, education and community engagement, we strive to create environments where everyone has the opportunity to learn, participate, grow and thrive.</p></article>
+      </div>
+      <h3 class="so">Our strategic objectives</h3>
+      <p class="intro">Through our work, we aim to:</p>
+      <ol class="objs"><li><h4>Promote Inclusion</h4><p>Support the well-being, development and meaningful inclusion of children and individuals living with disabilities.</p></li><li><h4>Raise Awareness</h4><p>Increase public understanding of different disabilities and challenge stigma, discrimination and misconceptions.</p></li><li><h4>Educate and Empower Families</h4><p>Provide families, caregivers and communities with information and guidance on how to understand and support people with disabilities.</p></li><li><h4>Encourage Inclusive Education</h4><p>Promote equal access to education, learning resources and opportunities for children with disabilities.</p></li><li><h4>Facilitate Access to Support</h4><p>Help connect families with educational materials, assistive devices, relevant professionals and essential support services.</p></li><li><h4>Promote Rights and Dignity</h4><p>Advocate for the dignity, rights, participation and equal opportunities of people living with disabilities.</p></li><li><h4>Build Strategic Partnerships</h4><p>Collaborate with schools, healthcare professionals, nonprofits, businesses and other institutions to advance our mission.</p></li><li><h4>Develop Sustainable Initiatives</h4><p>Establish meaningful community-based initiatives with the potential to grow and make a wider impact internationally.</p></li></ol>
+    </div>
+  </section>
+
+  <section id="values">
+    <div class="wrap">
+      <h2>Our core values</h2>
+      <div class="values">
+        <article><h3>Inclusion</h3><p>We believe everyone deserves to belong, participate and be accepted without discrimination.</p></article>
+        <article><h3>Equality</h3><p>We advocate for fair opportunities and access to resources regardless of an individual’s abilities or disabilities.</p></article>
+        <article><h3>Dignity and Respect</h3><p>We recognise the worth of every individual and believe everyone deserves to be treated with dignity, compassion and respect.</p></article>
+        <article><h3>Compassion</h3><p>We approach our work with empathy, patience, kindness and a genuine commitment to supporting others.</p></article>
+        <article><h3>Empowerment</h3><p>We encourage independence, confidence, personal development and the recognition of individual abilities.</p></article>
+        <article><h3>Integrity</h3><p>We are committed to honesty, transparency, accountability and responsible service.</p></article>
+        <article><h3>Community</h3><p>We believe meaningful and lasting change begins when individuals, families, schools and communities work together.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="work" class="band">
+    <div class="wrap">
+      <h2>What we do</h2>
+      <p class="intro">Our work is guided by the belief that every individual deserves the opportunity to live with dignity, participate in society and reach their full potential.</p>
+      <ol class="prog">
+        <li><h3>Disability Awareness and Community Education</h3><p>We aim to educate communities about disabilities, challenge misconceptions, reduce stigma and encourage understanding, acceptance and inclusion.</p><p>Through awareness campaigns, educational visits, community discussions and outreach activities, we hope to help people understand how they can support individuals living with disabilities.</p></li>
+        <li><h3>Child Support and Empowerment</h3><p>We are committed to promoting the well-being, development, education and inclusion of children living with disabilities.</p><p>Our proposed initiatives will focus on creating opportunities for children to learn, participate, develop their abilities and experience an environment where they feel valued and supported.</p></li>
+        <li><h3>Family and Caregiver Support</h3><p>Families and caregivers play an important role in supporting children and individuals living with disabilities.</p><p>We aim to provide educational guidance, relevant resources, awareness and practical assistance to families, while helping connect them with appropriate professional and community support services.</p></li>
+        <li><h3>Inclusive Education and School Outreach</h3><p>We seek to encourage inclusive learning environments where children with disabilities are respected, supported and given opportunities to participate in education.</p><p>Our planned school outreach activities will promote disability awareness among students, teachers and school communities.</p></li>
+        <li><h3>Advocacy and Equal Opportunities</h3><p>We advocate for the dignity, rights, participation and equal opportunities of people living with disabilities.</p><p>We aim to encourage institutions, organisations and communities to recognise individual abilities and create environments that promote accessibility, acceptance and inclusion.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="families">
+    <div class="wrap split">
+      <h2>Supporting children and families</h2>
+      <div>
+        <p>We understand that some families face financial and practical challenges when seeking appropriate support for children living with disabilities.</p>
+        <p>Whole Person Ability Initiative aims to provide needs-based assistance that responds to the actual needs of children and their families.</p>
+        <p>Rather than providing unrestricted cash assistance, our approach will focus on practical support such as:</p>
+        <ul class="checks">
+          <li>Educational materials, school supplies and learning resources.</li>
+          <li>Assistive devices and mobility support where appropriate.</li>
+          <li>Assistance connecting families with qualified healthcare and therapy professionals.</li>
+          <li>Essential supplies and disability-related resources.</li>
+          <li>Guidance and educational resources for parents and caregivers.</li>
+          <li>Referrals to relevant support organisations and service providers.</li>
+        </ul>
+        <p>Our goal is to help reduce barriers that prevent children living with disabilities from accessing essential resources, education and opportunities.</p>
+        <p>All assistance will be guided by available resources, individual needs, appropriate professional advice and responsible accountability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="founder" class="band">
+    <div class="wrap fgrid">
+      <div class="fphoto"><img src="images/founder.jpg" width="640" height="800" loading="lazy" alt="Portrait of Gospel Daniel, founder of Whole Person Ability Initiative, seated in a dark suit and bow tie"></div>
+      <div>
+        <h2>Meet our founder</h2>
+        <p class="fname">Gospel Daniel</p>
+        <p class="frole">Founder &amp; Executive Director</p>
+        <p class="frole2">Web Developer &amp; Designer</p>
+        <p>Gospel Daniel is the founder of Whole Person Ability Initiative, an organisation inspired by a personal family experience and a growing passion for disability inclusion, awareness and equal opportunities.</p>
+        <p>His inspiration comes from his youngest sister, who was born with Down syndrome.</p>
+        <p>Through her, he began to understand the importance of love, acceptance, patience, inclusion and recognising the abilities of people living with disabilities. His experience with her has been a continuous journey of learning, understanding and personal growth.</p>
+        <p>That experience inspired him to extend the same spirit of understanding and acceptance beyond his family by establishing an initiative dedicated to supporting children and individuals living with disabilities and educating communities about their needs, abilities and potential.</p>
+        <p>As a web developer and designer, he also brings a technology-oriented perspective to the organisation’s vision of creating awareness, building connections and expanding opportunities.</p>
+        <p>His ambition is to build an organisation that begins with meaningful community engagement and grows into an international initiative promoting a more inclusive world.</p>
+        <p class="fq">His belief: There Is Ability in Every Disability.</p>
       </div>
     </div>
   </section>
@@ -153,19 +277,6 @@ footer p{margin:.3rem 0}
     </div>
   </section>
 
-  <section id="work" class="band">
-    <div class="wrap">
-      <h2>What we do</h2>
-      <ul class="work">
-        <li><h3>Awareness</h3><p>Talks and campaigns in schools, churches and communities that replace myths about disability with facts.</p></li>
-        <li><h3>Family support</h3><p>Meetups and guidance for parents and caregivers, so no family has to face this alone.</p></li>
-        <li><h3>Referrals</h3><p>Connecting families to health professionals, therapists and schools that can support their child.</p></li>
-        <li><h3>Early signs</h3><p>Helping parents and teachers spot developmental delays early, when support can do the most good.</p></li>
-        <li><h3>Inclusion</h3><p>Speaking up for the rights and dignity of people with disabilities, and building skills and livelihood opportunities.</p></li>
-      </ul>
-    </div>
-  </section>
-
   <section id="story">
     <div class="wrap">
       <h2>Our story in seven slides</h2>
@@ -184,37 +295,51 @@ footer p{margin:.3rem 0}
 
   <section id="help">
     <div class="wrap">
-      <h2>Get involved</h2>
-      <div class="help">
-        <div>
-          <h3>Volunteer</h3>
-          <p>Teachers, health workers, students and community leaders: your time and skills can help a family.</p>
-          <a href="mailto:wholepersonability@gmail.com?subject=Volunteering">Email us about volunteering</a>
-        </div>
-        <div>
-          <h3>Partner</h3>
-          <p>Schools, clinics, churches and organisations that share our aims are welcome to work with us.</p>
-          <a href="mailto:wholepersonability@gmail.com?subject=Partnership">Email us about partnering</a>
-        </div>
-        <div>
-          <h3>Donate</h3>
-          <p>Give in Bitcoin, Ethereum or USDT. Every contribution helps us reach more families.</p>
-          <a href="#donate">See wallet addresses</a>
-        </div>
+      <h2>Become part of the movement</h2>
+      <p class="intro">Creating a more inclusive society requires collective effort. Every contribution, every act of kindness and every voice raised for inclusion can make a difference.</p>
+      <p class="intro">Whether you are an individual, student, professional, organisation or institution, there is an opportunity to be part of our journey.</p>
+      <div class="ways">
+        <article><h3>Become a Volunteer</h3><p>Join our growing team and contribute your time, skills, knowledge and passion towards promoting disability awareness, inclusion and community support.</p><a href="mailto:wholepersonability@gmail.com?subject=Volunteering">Email us about volunteering</a></article>
+        <article><h3>Partner With Us</h3><p>We welcome opportunities to collaborate with schools, businesses, nonprofit organisations, healthcare professionals, educational institutions and other stakeholders who share our vision.</p><a href="mailto:wholepersonability@gmail.com?subject=Partnership">Email us about partnering</a></article>
+        <article><h3>Support Our Mission</h3><p>Your support can help us develop educational programmes, organise community outreach activities and provide practical assistance to children and families who need it.</p><a href="#donate">See how to give</a></article>
+        <article><h3>Spread Awareness</h3><p>Help us educate more people by sharing our message, participating in awareness campaigns and encouraging conversations about disability inclusion.</p><a href="#story">Share our story</a></article>
       </div>
+      <p class="closer">Together, we can build a society where everyone belongs.</p>
     </div>
   </section>
 
-  <section id="donate">
+  <section id="donate" class="band">
     <div class="wrap">
-      <h2>Donate</h2>
-      <p style="max-width:40rem;margin:0 0 1.5rem;color:var(--muted)">While our registration is being completed, we accept donations in cryptocurrency only. Choose the coin you want to send from the list below.</p>
-      <div class="picker">
-        <label for="coin">Choose a cryptocurrency</label>
-        <select id="coin"><option value="">Select a coin</option></select>
-        <div id="walletOut" class="walletout" aria-live="polite"></div>
+      <h2>Help us build a more inclusive world</h2>
+      <div class="split2">
+        <div>
+          <p>Whole Person Ability Initiative is at the beginning of its journey, with a vision to support children and individuals living with disabilities, educate communities and promote equal opportunities.</p>
+          <p>To turn this vision into meaningful action, we need the support of individuals, organisations, businesses, foundations and compassionate partners who believe in our mission.</p>
+          <p>Your contribution can help us establish and carry out our planned activities, including:</p>
+          <ul class="checks">
+            <li>Community awareness and educational campaigns.</li>
+            <li>School visits and disability inclusion programmes.</li>
+            <li>Educational materials and learning resources.</li>
+            <li>Transportation and outreach logistics.</li>
+            <li>Practical assistance for children and families.</li>
+            <li>Development of sustainable community initiatives.</li>
+          </ul>
+          <p>We are committed to responsible use of contributions and ensuring that support is directed towards activities that advance our mission.</p>
+          <p>Whether through financial contributions, material donations, professional services or partnerships, every form of support brings us closer to our goals.</p>
+          <p class="closer">Be part of the beginning. Help us create a more inclusive future.</p>
+        </div>
+        <div class="give">
+          <h3>Give in cryptocurrency</h3>
+          <p>We currently accept donations in cryptocurrency. Choose the coin you want to send.</p>
+          <div class="picker">
+            <label for="coin">Choose a cryptocurrency</label>
+            <select id="coin"><option value="">Select a coin</option></select>
+            <div id="walletOut" class="walletout" aria-live="polite"></div>
+          </div>
+          <p class="warn">Always check the network before you send. Coins sent on the wrong network can be lost for good. If you are unsure, send a small test amount first.</p>
+          <p class="warn">For material donations, professional services or partnerships, please <a href="#contact">contact us</a>.</p>
+        </div>
       </div>
-      <p class="warn">Always check the network before you send. Coins sent on the wrong network can be lost for good. If you are unsure, send a small test amount first.</p>
     </div>
   </section>
 
@@ -229,10 +354,13 @@ footer p{margin:.3rem 0}
 
   <section id="contact">
     <div class="wrap split">
-      <h2>Contact</h2>
+      <h2>Get in touch</h2>
       <div>
-        <p>Questions, ideas or want to help? Write to us at <a href="mailto:wholepersonability@gmail.com">wholepersonability@gmail.com</a>.</p>
-        <p>Based in Abuja, Nigeria.</p>
+        <p class="lead">We would love to hear from you.</p>
+        <p>Whether you are interested in volunteering, partnering with us, supporting our mission, seeking information or learning more about our work, we welcome your enquiries.</p>
+        <p><strong>Whole Person Ability Initiative</strong><br>For general enquiries, partnerships, volunteering and support opportunities, please contact us through our official communication channels, including <a href="mailto:wholepersonability@gmail.com">wholepersonability@gmail.com</a>. Based in Abuja, Nigeria.</p>
+        <p>Together, let us promote understanding, inclusion and equal opportunities.</p>
+        <p class="belief">There Is Ability in Every Disability.</p>
         <ul id="socials" class="socials" aria-label="Social media"></ul>
       </div>
     </div>
@@ -241,6 +369,7 @@ footer p{margin:.3rem 0}
 
 <footer>
   <div class="wrap">
+    <p class="tag2">There Is Ability in Every Disability.</p>
     <p>&copy; 2026 Whole Person Ability Initiative.</p>
     <p>Registration with the Corporate Affairs Commission is in progress.</p>
   </div>
