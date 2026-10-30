@@ -6,7 +6,6 @@
 <title>Whole Person Ability Initiative</title>
 <meta name="description" content="Whole Person Ability Initiative supports people with intellectual and developmental disabilities and their families in Africa and around the world through awareness, referrals and community inclusion.">
 <link rel="icon" href="logo-mark.png" type="image/png">
-<link rel="stylesheet" href="extras.css">
 <script src="a11y.js"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,9 +15,7 @@
   --ink:#0b2b4f; --paper:#fafdf9; --sky:#e8f3ec; --sun:#2f8f3a; --leaf:#0a5a2f; --rose:#005fb3;
   --text:#0b2b4f; --muted:#3f5a6e; --line:#c9dccf; --leafText:#256a31; --btnbg:#0a5a2f; --btnfg:#fff;
 }
-@media (prefers-color-scheme:dark){
-  :root{--paper:#0c1d16; --sky:#14301f; --text:#eaf5ee; --muted:#b5cdbd; --line:#2c4a39; --ink:#eaf5ee; --leafText:#8fd35f; --sun:#8fd35f; --btnbg:#8fd35f; --btnfg:#032a17}
-}
+@media (prefers-color-scheme:dark){:root{--paper:#0f1a2b;--sky:#16253b;--text:#eaf1fa;--muted:#b4c3d8;--line:#2d4261;--ink:#eaf1fa;--leafText:#7be0ad;--sun:#5fd8a4;--rose:#7db8f5;--btnbg:#5fd8a4;--btnfg:#06231a}}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
@@ -135,6 +132,7 @@ footer p{margin:.3rem 0}
 .objs h4{font-family:"Bricolage Grotesque",sans-serif;font-size:1.15rem;margin:0 0 .3rem}.objs p{margin:0;color:var(--muted);font-size:1.02rem;line-height:1.55}
 @media (max-width:760px){.objs{grid-template-columns:1fr}}
 </style>
+<link rel="stylesheet" href="extras.css">
 </head>
 <body>
 <a class="skip" href="#top">Skip to main content</a>
@@ -163,16 +161,19 @@ footer p{margin:.3rem 0}
   </div>
 
   <section id="about">
-    <div class="wrap split">
-      <h2>Who we are</h2>
+    <div class="wrap media">
       <div>
-        <p>Whole Person Ability Initiative is an organisation established to promote the dignity, inclusion, empowerment and equal opportunities of children and individuals living with disabilities.</p>
-        <p>We believe that every person has abilities, potential and value, regardless of their physical, intellectual, developmental or other disabilities.</p>
-        <p>Our organisation seeks to create a more understanding and inclusive society by educating communities, supporting families, encouraging inclusive education and advocating for equal opportunities.</p>
-        <p>We recognise that meaningful inclusion begins with awareness, acceptance and action. Through community engagement, educational initiatives, advocacy and practical support, we aim to make a positive difference in the lives of individuals and families affected by disabilities.</p>
-        <p>Although our journey begins within local communities, our vision is global. We aspire to build partnerships and initiatives that contribute to a world where everyone has the opportunity to participate, grow and thrive.</p>
+        <h2>Who we are</h2>
+        <p class="lead2">Whole Person Ability Initiative promotes the dignity, inclusion and equal opportunities of children and individuals living with disabilities.</p>
+        <ul class="checks">
+          <li><strong>Every person has abilities,</strong> potential and value, whatever their physical, intellectual, developmental or other disability.</li>
+          <li><strong>We build understanding</strong> by educating communities, supporting families, encouraging inclusive education and advocating for equal opportunities.</li>
+          <li><strong>Inclusion starts</strong> with awareness, acceptance and action, through community engagement, education, advocacy and practical support.</li>
+          <li><strong>We begin locally,</strong> with a global vision: partnerships that help everyone participate, grow and thrive.</li>
+        </ul>
         <p class="belief">Our belief: There Is Ability in Every Disability.</p>
       </div>
+      <figure class="pic"><img src="images/playground-inclusion.jpg" width="900" height="901" loading="lazy" alt="Four children play together in a sandpit at a playground. One boy, who uses a wheelchair, laughs with the others."><figcaption>Illustrative image</figcaption></figure>
     </div>
   </section>
 
@@ -207,14 +208,17 @@ footer p{margin:.3rem 0}
   <section id="work" class="band">
     <div class="wrap">
       <h2>What we do</h2>
-      <p class="intro">Our work is guided by the belief that every individual deserves the opportunity to live with dignity, participate in society and reach their full potential.</p>
-      <ol class="prog">
-        <li><h3>Disability Awareness and Community Education</h3><p>We aim to educate communities about disabilities, challenge misconceptions, reduce stigma and encourage understanding, acceptance and inclusion.</p><p>Through awareness campaigns, educational visits, community discussions and outreach activities, we hope to help people understand how they can support individuals living with disabilities.</p></li>
-        <li><h3>Child Support and Empowerment</h3><p>We are committed to promoting the well-being, development, education and inclusion of children living with disabilities.</p><p>Our proposed initiatives will focus on creating opportunities for children to learn, participate, develop their abilities and experience an environment where they feel valued and supported.</p></li>
-        <li><h3>Family and Caregiver Support</h3><p>Families and caregivers play an important role in supporting children and individuals living with disabilities.</p><p>We aim to provide educational guidance, relevant resources, awareness and practical assistance to families, while helping connect them with appropriate professional and community support services.</p></li>
-        <li><h3>Inclusive Education and School Outreach</h3><p>We seek to encourage inclusive learning environments where children with disabilities are respected, supported and given opportunities to participate in education.</p><p>Our planned school outreach activities will promote disability awareness among students, teachers and school communities.</p></li>
-        <li><h3>Advocacy and Equal Opportunities</h3><p>We advocate for the dignity, rights, participation and equal opportunities of people living with disabilities.</p><p>We aim to encourage institutions, organisations and communities to recognise individual abilities and create environments that promote accessibility, acceptance and inclusion.</p></li>
-      </ol>
+      <p class="intro">Every person deserves to live with dignity, take part in society and reach their potential. Our work focuses on five areas.</p>
+      <div class="media">
+        <ol class="prog">
+          <li><h3>Awareness and community education</h3><p>Campaigns, school visits and community talks that challenge myths, reduce stigma and build understanding.</p></li>
+          <li><h3>Child support and empowerment</h3><p>Opportunities for children to learn, take part and develop their abilities where they feel valued.</p></li>
+          <li><h3>Family and caregiver support</h3><p>Guidance, resources and practical help for families, and links to trusted professionals and services.</p></li>
+          <li><h3>Inclusive education and school outreach</h3><p>Disability awareness for students and teachers, and support for classrooms that welcome every child.</p></li>
+          <li><h3>Advocacy and equal opportunities</h3><p>Standing up for dignity, rights and access, and encouraging institutions to recognise ability.</p></li>
+        </ol>
+        <figure class="pic stick"><img src="images/classroom-support.jpg" width="903" height="518" loading="lazy" alt="A teacher and a helper sit with young children at a table in a bright classroom, working with colourful learning materials. Two children use wheelchairs."><figcaption>Illustrative image</figcaption></figure>
+      </div>
     </div>
   </section>
 
@@ -241,13 +245,13 @@ footer p{margin:.3rem 0}
   </section>
 
   <section id="founder" class="band">
-    <div class="wrap fgrid">
-      <div class="fphoto"><img src="images/founder.jpg" width="640" height="800" loading="lazy" alt="Portrait of Gospel Daniel, founder of Whole Person Ability Initiative, seated in a dark suit and bow tie"></div>
-      <div>
-        <h2>Meet our founder</h2>
-        <p class="fname">Gospel Daniel</p>
-        <p class="frole">Founder &amp; Executive Director</p>
-        <p class="frole2">Web Developer &amp; Designer</p>
+    <div class="wrap fcenter">
+      <h2>Meet our founder</h2>
+      <div class="fcircle"><img src="images/founder-circle.jpg" width="600" height="600" loading="lazy" alt="Portrait of Gospel Daniel, founder of Whole Person Ability Initiative, seated in a dark suit and bow tie"></div>
+      <p class="fname">Gospel Daniel</p>
+      <p class="frole">Founder &amp; Executive Director</p>
+      <p class="frole2">Web Developer &amp; Designer</p>
+      <div class="fbio">
         <p>Gospel Daniel is the founder of Whole Person Ability Initiative, an organisation inspired by a personal family experience and a growing passion for disability inclusion, awareness and equal opportunities.</p>
         <p>His inspiration comes from his youngest sister, who was born with Down syndrome.</p>
         <p>Through her, he began to understand the importance of love, acceptance, patience, inclusion and recognising the abilities of people living with disabilities. His experience with her has been a continuous journey of learning, understanding and personal growth.</p>
@@ -262,29 +266,32 @@ footer p{margin:.3rem 0}
   <section id="understand">
     <div class="wrap">
       <h2>Understanding the conditions</h2>
-      <ul class="work">
-        <li><h3>Intellectual disability</h3><p>Significant differences in learning, reasoning and everyday skills that begin in childhood. With the right support, people with an intellectual disability learn and grow.</p></li>
-        <li><h3>Down syndrome</h3><p>A genetic condition caused by an extra copy of chromosome 21. It happens by chance and is not caused by anything a parent did.</p></li>
-        <li><h3>Autism</h3><p>A difference in how a person communicates, interacts and experiences the world. It is a spectrum, so every autistic person is different.</p></li>
-        <li><h3>Developmental delay</h3><p>When a child reaches milestones such as walking or talking later than expected. Spotting it early means support can start sooner.</p></li>
-      </ul>
-      <h3 style="margin:2.25rem 0 .5rem;font-size:1.4rem">How you can support someone</h3>
-      <ul class="tips">
+      <div class="media">
+        <dl class="defs">
+          <div><dt>Intellectual disability</dt><dd>Differences in learning, reasoning and everyday skills that begin in childhood. With the right support, people learn and grow.</dd></div>
+          <div><dt>Down syndrome</dt><dd>A genetic condition caused by an extra copy of chromosome 21. It happens by chance, not because of anything a parent did.</dd></div>
+          <div><dt>Autism</dt><dd>A difference in how a person communicates and experiences the world. It is a spectrum, so every autistic person is different.</dd></div>
+          <div><dt>Developmental delay</dt><dd>Reaching milestones like walking or talking later than expected. Early support helps.</dd></div>
+        </dl>
+        <figure class="pic"><img src="images/peer-learning.jpg" width="903" height="678" loading="lazy" alt="Two classmates and a girl who uses a wheelchair read a picture book together at a classroom table, smiling."><figcaption>Illustrative image</figcaption></figure>
+      </div>
+      <h3 class="tipshead">How you can support someone</h3>
+      <ul class="checks">
         <li>Speak to the person, not about them.</li>
         <li>Be patient and give them time.</li>
         <li>Celebrate small steps.</li>
-        <li>Talk to a health professional early if you notice delays.</li>
+        <li>Seek professional advice early if you notice delays.</li>
         <li>Include them in school, church and community life.</li>
       </ul>
-      <p style="margin:1.5rem 0 0"><a class="btn" href="learn.html">Read the full lesson</a></p>
-      <p class="warn">This is general information, not medical advice. Please speak to a doctor about your own child.</p>
+      <p class="warn">General information, not medical advice. Please see a doctor about your own child.</p>
+      <p><a class="btn" href="learn.html">Read the full lesson</a></p>
     </div>
   </section>
 
   <section id="story">
     <div class="wrap">
-      <h2>Our story in seven slides</h2>
-      <p style="max-width:40rem;margin:0 0 1.5rem;color:var(--muted)">Swipe through to see why we exist and how you can help.</p>
+      <h2>Our story</h2>
+      <p style="max-width:40rem;margin:0 0 1.5rem;color:var(--muted)">Seven slides on why we exist and how you can help.</p>
     </div>
     <div class="slides" tabindex="0" role="region" aria-label="Our story, seven slides">
       <img src="images/slide-1.png" width="864" height="1080" loading="lazy" alt="Slide 1: Millions of children around the world are born with intellectual and developmental disabilities. Is it their fault? Is it their parents’ fault?">
@@ -315,7 +322,7 @@ footer p{margin:.3rem 0}
   <section id="apply" class="band">
     <div class="wrap">
       <h2>Apply or send an enquiry</h2>
-      <p class="intro">Choose the form that fits. We only ask for what we need to reply. Your details are used only to respond to your request (see our <a href="#privacy">privacy notice</a>).</p>
+      <p class="intro">Choose the form that fits. We only ask for what we need to reply. Your details are used only to respond to your request (see our <a href="privacy.html" target="_blank" rel="noopener">privacy notice<span class="sr"> (opens in a new tab)</span></a>).</p>
       <details class="fdet" id="apply-volunteer">
         <summary>Volunteer registration</summary>
         <div class="fbody">
@@ -323,7 +330,7 @@ footer p{margin:.3rem 0}
           <form data-form="volunteer" novalidate aria-label="Volunteer registration">
             <div class="errsum" tabindex="-1" hidden></div>
             <div class="fld" data-field="name"><label for="volunteer-name">Full name <span class="req">(required)</span></label><input type="text" id="volunteer-name" name="name" maxlength="100" autocomplete="name" aria-required="true"></div><div class="fld" data-field="email"><label for="volunteer-email">Email address <span class="req">(required)</span></label><input type="email" id="volunteer-email" name="email" maxlength="120" autocomplete="email" aria-required="true"></div><div class="fld" data-field="phone"><label for="volunteer-phone">Phone number <span class="opt">(optional)</span></label><p class="hint" id="volunteer-phone-hint">Include your country code if you are outside Nigeria.</p><input type="tel" id="volunteer-phone" name="phone" maxlength="30" autocomplete="tel" aria-describedby="volunteer-phone-hint"></div><div class="fld" data-field="skills"><label for="volunteer-skills">Skills you can offer <span class="req">(required)</span></label><p class="hint" id="volunteer-skills-hint">For example: teaching, healthcare, design, fundraising, transport or event planning.</p><textarea id="volunteer-skills" name="skills" rows="4" maxlength="600" aria-required="true" aria-describedby="volunteer-skills-hint"></textarea></div><div class="fld" data-field="availability"><label for="volunteer-availability">Availability <span class="req">(required)</span></label><p class="hint" id="volunteer-availability-hint">For example: weekends, two evenings a week, or school holidays.</p><input type="text" id="volunteer-availability" name="availability" maxlength="300" aria-required="true" aria-describedby="volunteer-availability-hint"></div>
-            <div class="fld" data-field="consent"><div class="consent"><input type="checkbox" id="volunteer-consent" name="consent"><label for="volunteer-consent">I have read the <a href="#privacy">privacy notice</a> and agree to Whole Person Ability Initiative using my details to respond to this request.</label></div></div>
+            <div class="fld" data-field="consent"><div class="consent"><input type="checkbox" id="volunteer-consent" name="consent"><label for="volunteer-consent">I have read the <a href="privacy.html" target="_blank" rel="noopener">privacy notice<span class="sr"> (opens in a new tab)</span></a> and agree to Whole Person Ability Initiative using my details to respond to this request.</label></div></div>
             <div class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
             <button type="submit" class="fsubmit">Send my registration</button>
           </form>
@@ -337,7 +344,7 @@ footer p{margin:.3rem 0}
           <form data-form="partnership" novalidate aria-label="Partnership enquiry">
             <div class="errsum" tabindex="-1" hidden></div>
             <div class="fld" data-field="organisation"><label for="partnership-organisation">Organisation name <span class="req">(required)</span></label><input type="text" id="partnership-organisation" name="organisation" maxlength="150" autocomplete="organization" aria-required="true"></div><div class="fld" data-field="contact_name"><label for="partnership-contact_name">Contact person <span class="req">(required)</span></label><input type="text" id="partnership-contact_name" name="contact_name" maxlength="100" autocomplete="name" aria-required="true"></div><div class="fld" data-field="email"><label for="partnership-email">Email address <span class="req">(required)</span></label><input type="email" id="partnership-email" name="email" maxlength="120" autocomplete="email" aria-required="true"></div><div class="fld" data-field="phone"><label for="partnership-phone">Phone number <span class="opt">(optional)</span></label><input type="tel" id="partnership-phone" name="phone" maxlength="30" autocomplete="tel"></div><div class="fld" data-field="proposal"><label for="partnership-proposal">Proposed collaboration <span class="req">(required)</span></label><textarea id="partnership-proposal" name="proposal" rows="6" maxlength="1500" aria-required="true"></textarea></div>
-            <div class="fld" data-field="consent"><div class="consent"><input type="checkbox" id="partnership-consent" name="consent"><label for="partnership-consent">I have read the <a href="#privacy">privacy notice</a> and agree to Whole Person Ability Initiative using my details to respond to this request.</label></div></div>
+            <div class="fld" data-field="consent"><div class="consent"><input type="checkbox" id="partnership-consent" name="consent"><label for="partnership-consent">I have read the <a href="privacy.html" target="_blank" rel="noopener">privacy notice<span class="sr"> (opens in a new tab)</span></a> and agree to Whole Person Ability Initiative using my details to respond to this request.</label></div></div>
             <div class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
             <button type="submit" class="fsubmit">Send my enquiry</button>
           </form>
@@ -351,34 +358,13 @@ footer p{margin:.3rem 0}
           <form data-form="family" novalidate aria-label="Family support request">
             <div class="errsum" tabindex="-1" hidden></div>
             <div class="fld" data-field="name"><label for="family-name">Your name (parent or caregiver) <span class="req">(required)</span></label><input type="text" id="family-name" name="name" maxlength="100" autocomplete="name" aria-required="true"></div><div class="fld" data-field="email"><label for="family-email">Email address <span class="opt">(optional)</span></label><p class="hint" id="family-email-hint">Please give an email address or a phone number, so we can reply.</p><input type="email" id="family-email" name="email" maxlength="120" autocomplete="email" aria-describedby="family-email-hint"></div><div class="fld" data-field="phone"><label for="family-phone">Phone number <span class="opt">(optional)</span></label><input type="tel" id="family-phone" name="phone" maxlength="30" autocomplete="tel"></div><div class="fld" data-field="support_type"><label for="family-support_type">Type of support needed <span class="req">(required)</span></label><select id="family-support_type" name="support_type" aria-required="true"><option value="">Choose one</option><option>Educational materials and school supplies</option><option>Assistive devices or mobility support</option><option>Connecting with healthcare or therapy professionals</option><option>Guidance for parents and caregivers</option><option>Referral to other support organisations</option><option>Other</option></select></div><div class="fld" data-field="description"><label for="family-description">Description of your request <span class="req">(required)</span></label><p class="hint" id="family-description-hint">Describe what you need in a few sentences.</p><textarea id="family-description" name="description" rows="4" maxlength="1000" aria-required="true" aria-describedby="family-description-hint"></textarea></div>
-            <div class="fld" data-field="consent"><div class="consent"><input type="checkbox" id="family-consent" name="consent"><label for="family-consent">I have read the <a href="#privacy">privacy notice</a> and agree to Whole Person Ability Initiative using my details to respond to this request.</label></div></div>
+            <div class="fld" data-field="consent"><div class="consent"><input type="checkbox" id="family-consent" name="consent"><label for="family-consent">I have read the <a href="privacy.html" target="_blank" rel="noopener">privacy notice<span class="sr"> (opens in a new tab)</span></a> and agree to Whole Person Ability Initiative using my details to respond to this request.</label></div></div>
             <div class="hp" aria-hidden="true"><label>Leave this field empty <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
             <button type="submit" class="fsubmit">Send my request</button>
           </form>
           <div class="fok" tabindex="-1" role="status" hidden>Thank you. We have received your request and will reply using the contact details you gave.</div>
         </div>
       </details>
-    </div>
-  </section>
-
-  <section id="privacy" class="priv">
-    <div class="wrap">
-      <h2>Privacy notice</h2>
-      <p class="intro">Last updated: October 2026</p>
-      <h3>Who we are</h3>
-      <p>Whole Person Ability Initiative, based in Abuja, Nigeria. You can reach us at <a href="mailto:wholepersonability@gmail.com">wholepersonability@gmail.com</a>.</p>
-      <h3>What we collect</h3>
-      <p>Only what each form asks for: your name, your contact details and the information you choose to type. We do not ask for children’s names, photos, medical records or ID numbers, and we ask you not to include them.</p>
-      <h3>Why we collect it</h3>
-      <p>To reply to your request, and to match volunteers, partners and families with the right next step. We do not sell your details or use them for marketing.</p>
-      <h3>Who sees it</h3>
-      <p>Your form is sent by email to our official inbox. An email delivery service and our website host process it for us so that it can arrive. We do not keep a separate database of submissions on the website.</p>
-      <h3>How long we keep it</h3>
-      <p>Only for as long as we need it to respond and to keep sensible records. After that we delete it.</p>
-      <h3>Requests involving children</h3>
-      <p>Family support requests must be made by a parent or caregiver. We collect as little as possible about the child: the type of support needed and whatever you choose to describe.</p>
-      <h3>Your rights</h3>
-      <p>You can ask to see, correct or delete the information you sent us. Email us and we will help. We aim to handle personal information responsibly and in line with Nigerian data protection law.</p>
     </div>
   </section>
 
@@ -410,7 +396,7 @@ footer p{margin:.3rem 0}
             <select id="coin"><option value="">Select a coin</option></select>
             <div id="walletOut" class="walletout" aria-live="polite"></div>
           </div>
-          <p class="warn">Always check the network before you send. Coins sent on the wrong network can be lost for good. If you are unsure, send a small test amount first.</p>
+          <p class="warn">New to crypto? Send a small test amount first to check the address and network.</p>
           <p class="warn">For material donations, professional services or partnerships, please <a href="#contact">contact us</a>.</p>
         </div>
       </div>
@@ -444,7 +430,7 @@ footer p{margin:.3rem 0}
 <footer>
   <div class="wrap">
     <p class="tag2">There Is Ability in Every Disability.</p>
-    <p>&copy; 2026 Whole Person Ability Initiative. <a href="#privacy">Privacy notice</a></p>
+    <p>&copy; 2026 Whole Person Ability Initiative. <a href="privacy.html">Privacy notice</a></p>
     <p>Registration with the Corporate Affairs Commission is in progress.</p>
   </div>
 </footer>
@@ -458,34 +444,27 @@ var WALLETS=[
 ];
 (function(){
   var sel=document.getElementById("coin"),out=document.getElementById("walletOut");
-  WALLETS.forEach(function(w,i){
-    var o=document.createElement("option");o.value=i;o.textContent=w.coin;sel.appendChild(o);
-  });
+  WALLETS.forEach(function(w,i){var o=document.createElement("option");o.value=i;o.textContent=w.coin;sel.appendChild(o)});
+  function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
   sel.addEventListener("change",function(){
-    out.textContent="";
-    if(sel.value==="")return;
-    var w=WALLETS[+sel.value];
-    var ready=w.address.indexOf("PASTE_")!==0;
-    var row=document.createElement("div");row.className="wallet";
-    var t=document.createElement("div");
-    var h=document.createElement("h3");h.textContent=w.coin;
-    var n=document.createElement("small");n.textContent="Network: "+w.network;
-    t.appendChild(h);t.appendChild(n);
-    var a=document.createElement("div");a.className="addr";
-    a.textContent=ready?w.address:"Address coming soon";
-    var b=document.createElement("button");b.className="copy";b.type="button";
-    b.textContent="Copy";b.disabled=!ready;
+    out.textContent="";if(sel.value==="")return;
+    var w=WALLETS[+sel.value],ready=w.address.indexOf("PASTE_")!==0;
+    var card=el("div","wcard"),head=el("div","whead");
+    head.appendChild(el("h4","wcoin",w.coin));head.appendChild(el("span","wnet","Network: "+w.network));
+    var warn=el("p","netwarn");warn.setAttribute("role","note");
+    warn.appendChild(el("strong",null,"Check the network. "));
+    warn.appendChild(document.createTextNode("Send only "+w.coin+" on the "+w.network+" to this address. Anything else can be lost for good."));
+    var lab=el("p","wlabel","Wallet address");lab.id="addr-label";
+    var a=el("div","addr",ready?w.address:"Address coming soon");a.setAttribute("aria-labelledby","addr-label");
+    var b=el("button","copy","Copy address");b.type="button";b.disabled=!ready;
     b.addEventListener("click",function(){
-      try{
-        navigator.clipboard.writeText(w.address).then(function(){
-          b.textContent="Copied";var L=document.getElementById("a11y-live");if(L){L.textContent="";setTimeout(function(){L.textContent="Address copied to clipboard"},50)}setTimeout(function(){b.textContent="Copy"},1800);
-        });
-      }catch(e){}
+      try{navigator.clipboard.writeText(w.address).then(function(){
+        b.textContent="Copied";b.classList.add("done");
+        var L=document.getElementById("a11y-live");if(L){L.textContent="";setTimeout(function(){L.textContent="Address copied to clipboard"},50)}
+        setTimeout(function(){b.textContent="Copy address";b.classList.remove("done")},2200);
+      })}catch(e){}
     });
-    row.appendChild(t);row.appendChild(a);row.appendChild(b);out.appendChild(row);
-    var p=document.createElement("p");
-    p.textContent="Send only "+w.coin+" on the "+w.network+" to this address.";
-    out.appendChild(p);
+    card.appendChild(head);card.appendChild(warn);card.appendChild(lab);card.appendChild(a);card.appendChild(b);out.appendChild(card);
   });
 })();
 // Paste your page links between the quotes. Empty ones are hidden.
